@@ -1,0 +1,134 @@
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color:rgb(235, 147, 107);;
+
+}
+
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 10px;
+  margin: 0px;
+  background-color: rgba(229, 250, 241, 0.342);
+}
+
+nav{
+  background-color:  rgb(0, 8, 34);
+  height: 200px;
+  padding-top: 90px;
+
+   
+}
+a{
+  font-family: Poppins,sans-serif;
+  padding:10px;
+  padding-top: 100px;
+  font-size: 1.7em;
+  color:rgb(235, 147, 107);
+  display: inline;
+}
+
+.header{
+
+}
+h1{
+  font-family: Poppins, sans-serif;
+  font-size: 2.4em;
+  color:rgb(235, 147, 107);
+}
+p{
+  /* padding-top: 90px; */
+}
+.info{
+  font-size: 30px;
+  padding-top: 20px;
+  font-family:'Heebo', sans-serif;
+  font-weight: 400;
+  color: rgb(0, 14, 58);
+}
+
+/* Tiny reset thing */
+body,html{margin:0;padding:0;}
+
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  /* height: 100vh; */
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  /* overflow-x: hidden; */
+  /* Enable scrolling on the page. */
+  /* overflow-y: auto; */
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
+  
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 110%;
+  /* Keep the image from overlapping sibling elements. */ 
+  z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+  background: rgb(0, 8, 34);
+  font-size: 2em;
+}
+
+/* Sets the actual background images. This part is crucial. */
+.bg1::after{
+/* background-image:; */
+/* background-image: 100%; */
+
+}
+.bg2{
+/* background-image:; */
+/* background-size: 100%; */
+}
+/* image grids */
+.container > div {
+
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.container > div > img {
+
+}
+
+html, body {
+  color:  rgb(0, 8, 34);
+}
+img{
+  /* size: 40px; */
+}
+
+

@@ -1,0 +1,58 @@
+* {box-sizing: border-box;}
+/*always start with containers*/
+.wrapper {
+
+}
+
+.wrapper > div {
+    /* border: .6px solid #627c99;; */
+    border-radius: 2px;
+    background-color:rgb(229, 250, 241);
+    padding: 1.5em;
+}
+
+.header {
+    grid-area: h;
+}
+.footer {
+    grid-area: f;
+}
+.main {
+    grid-area: m;
+}
+.sidebar {
+    grid-area: s;
+}
+/* where we are setting the size for the mobile devices */
+.wrapper {
+    display: grid;
+    grid-auto-rows: 15% auto auto 7%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "h"
+      "m"
+      "s"
+      "f";
+}
+/* @media (min-width: 600px) {
+    .wrapper {
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas: 
+          "h h h h h h h h h"
+          "s s s m m m m m m"
+          "f f f f f f f f f";
+    }
+} */
+/* when the screen is 750 px or larger, do this */
+@media (min-width: 750px) {
+   
+
+    .wrapper {
+        grid-template-columns: repeat(9, 1fr);
+        grid-auto-rows: 13% auto auto 5%;
+        grid-template-areas: 
+          "h h h h h h h h h"
+          "s s s s m m m m m"
+          "f f f f f f f f f";
+    }
+}
